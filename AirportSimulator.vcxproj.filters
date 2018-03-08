@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ben72\OneDrive\Job Apps\Spring 2018\Lufthansa\airportsimulator-bensontsai\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AirportToken.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Runway.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParkingStand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Airport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ben72\OneDrive\Job Apps\Spring 2018\Lufthansa\airportsimulator-bensontsai\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F638C01C-6979-3F54-AAD9-AF18D5A68A16}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AirportToken.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Runway.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParkingStand.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Airport.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

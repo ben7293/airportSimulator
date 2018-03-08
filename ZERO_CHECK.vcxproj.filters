@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ben72\OneDrive\Job Apps\Spring 2018\Lufthansa\airportsimulator-bensontsai\CMakeFiles\0a47a9c0c199312febb27ae77b956859\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{BBED33C2-9391-3FDA-9379-1BDD2C21AB28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
