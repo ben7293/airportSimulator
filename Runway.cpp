@@ -10,12 +10,15 @@ AirportToken Runway::checkReservation() {
 	return reservationToken;
 }
 
-void Runway::assignReservation(const AirportToken token) {
-	reservationToken = token;
-}
-
 Runway::RunwayState Runway::checkState() {
 	return status;
+}
+
+void Runway::runwayOps(const AirportToken token) {
+	if (token == reservationToken) {
+		std::lock_guard<std::recursive_mutex> rwyLock(rwyMutex);
+		status = RunwayState::InOperation;
+	}
 }
 
 bool Runway::reqRunway() {
@@ -32,9 +35,6 @@ void Runway::freeRunway() {
 	status = RunwayState::Available;
 }
 
-void Runway::runwayOps(const AirportToken token) {
-	if (token == reservationToken) {
-		std::lock_guard<std::recursive_mutex> rwyLock(rwyMutex);
-		status = RunwayState::InOperation;
-	}
+void Runway::assignReservation(const AirportToken token) {
+	reservationToken = token;
 }

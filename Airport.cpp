@@ -117,7 +117,6 @@ tuple<Airport::AirportDirective, AirportToken> Airport::requestLanding(const str
 		return make_tuple(AirportDirective::Hold, token);
 	}
 	else {
-		//token.fillToken(aircraftID, runwayID, parkingStandID, tokenValidity);
 		token = AirportToken(aircraftID, runwayID, parkingStandID, tokenValidity);
 		parkingStandID->assignReservation(token);
 		runwayID->assignReservation(token);
@@ -156,7 +155,6 @@ tuple<Airport::AirportDirective, AirportToken> Airport::requestTakeOff(const str
 	if (parkingStandID == nullptr) return make_tuple(AirportDirective::Hold, token);
 	if (runwayID == nullptr) return make_tuple(AirportDirective::Hold, token);
 
-	//token.fillToken(aircraftID, runwayID, parkingStandID, tokenValidity);
 	token = AirportToken(aircraftID, runwayID, parkingStandID, tokenValidity);
 	parkingStandID->assignReservation(token);
 	runwayID->assignReservation(token);

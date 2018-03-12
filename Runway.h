@@ -15,16 +15,14 @@ public:
 	};
 	Runway(const int length);
 	AirportToken checkReservation();
-
-	void assignReservation(const AirportToken token);
-
 	RunwayState checkState();
-	bool reqRunway();
-	void freeRunway();
-
 	void runwayOps(const AirportToken token);
+	friend class Airport;
 
 private:
+	bool reqRunway();
+	void freeRunway();
+	void assignReservation(const AirportToken token);
 	std::recursive_mutex rwyMutex;
 	const int length;
 	RunwayState status = RunwayState::Available;

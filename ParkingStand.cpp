@@ -8,12 +8,16 @@ AirportToken ParkingStand::checkReservation() const {
 	return reservationToken;
 }
 
-void ParkingStand::assignReservation(AirportToken token) {
-	reservationToken = token;
-}
 
 ParkingStand::ParkingState ParkingStand::checkState() const {
 	return status;
+}
+
+void ParkingStand::parkingOps(const AirportToken& token) {
+	if (token == reservationToken) {
+		lock_guard<recursive_mutex> pkgLock(pkgMutex);
+		status = ParkingState::Occupied;
+	}
 }
 
 bool ParkingStand::reqParking() {
@@ -31,10 +35,8 @@ void ParkingStand::freeParking() {
 	reservationToken = AirportToken();
 }
 
-void ParkingStand::parkingOps(const AirportToken& token) {
-	if (token == reservationToken) {
-		lock_guard<recursive_mutex> pkgLock(pkgMutex);
-		status = ParkingState::Occupied;
-	}
+void ParkingStand::assignReservation(AirportToken token) {
+	reservationToken = token;
 }
+
 

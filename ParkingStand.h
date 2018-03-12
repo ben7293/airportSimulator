@@ -17,13 +17,14 @@ public:
 		Available
 	};
 	AirportToken checkReservation() const;
-	void assignReservation(AirportToken token);
 	ParkingState checkState() const;
-	bool reqParking();
-	void freeParking();
 	void parkingOps(const AirportToken& token);
+	friend class Airport;
 
 private:
+	bool reqParking();
+	void freeParking();
+	void assignReservation(AirportToken token);
 	recursive_mutex pkgMutex;
 	ParkingState status = ParkingState::Available;
 	AirportToken reservationToken;
