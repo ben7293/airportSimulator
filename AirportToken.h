@@ -14,7 +14,6 @@ public:
 	bool hasTokenExpired() const;
 	bool isTokenValid() const;
 	bool operator==(AirportToken rhs) const;
-	void fillToken(std::string aircraftID, Runway* runwayID, ParkingStand* parkingStandID, std::chrono::seconds validity);
 	std::string getAircraftID() const;
 	Runway* getRunwayID() const;
 	ParkingStand* getParkingStandID() const;

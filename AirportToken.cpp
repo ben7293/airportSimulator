@@ -21,13 +21,6 @@ bool AirportToken::operator==(AirportToken rhs) const {
 		expiry == rhs.expiry;
 }
 
-void AirportToken::fillToken(std::string aircraftID, Runway* runwayID, ParkingStand* parkingStandID, std::chrono::seconds validity) {
-	this->aircraftID = aircraftID;
-	this->runwayID = runwayID;
-	this->parkingStandID = parkingStandID;
-	this->expiry = std::chrono::system_clock::now() + validity;
-}
-
 std::string AirportToken::getAircraftID() const {
 	return aircraftID;
 }
